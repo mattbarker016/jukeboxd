@@ -48,7 +48,7 @@ class MediaCollectionViewController: UICollectionViewController, MediaCollection
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        content.isEmpty ? setPlaceholderBackgroundView() : removePlaceholderBackgroundView()
+        content.isEmpty ? setEmptyDataView() : removeEmptyDataView()
         return content.count
     }
     
@@ -60,17 +60,17 @@ class MediaCollectionViewController: UICollectionViewController, MediaCollection
     
     // MARK: Empty Data Source
     
-    var placeholderBackgrounndView: PlaceholderBackgroundView {
-        return PlaceholderBackgroundView(message: "Welcome to Jukeboxd! Search an album to rate and review it and keep track of your favorite albums!")
+    var emptyDataView: EmptyDataView {
+        return EmptyDataView(message: "Welcome to Jukeboxd! Search an album to rate and review it and keep track of your favorite albums!")
     }
     
-    func setPlaceholderBackgroundView() {
-        collectionView.backgroundView = placeholderBackgrounndView
+    func setEmptyDataView() {
+        collectionView.backgroundView = emptyDataView
         content = []
         collectionView.reloadData()
     }
     
-    func removePlaceholderBackgroundView() {
+    func removeEmptyDataView() {
         collectionView.backgroundView = nil
     }
     

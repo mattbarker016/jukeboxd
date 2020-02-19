@@ -21,7 +21,8 @@ class MediaCollectionViewFlowLayout: UICollectionViewFlowLayout {
     override init() {
         super.init()
                 
-        let containerWidth = UIScreen.main.bounds.width - horizontalInset * 2
+        let mainWidth = UIScreen.main.bounds.width
+        let containerWidth = mainWidth - horizontalInset * 2
         let numberOfSpaces = numberOfItemsPerRow - 1
         let totalItemWidth = containerWidth - (interItemSpacing * CGFloat(numberOfSpaces))
         let itemWidth = totalItemWidth / CGFloat(numberOfItemsPerRow)
@@ -37,8 +38,4 @@ class MediaCollectionViewFlowLayout: UICollectionViewFlowLayout {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func prepare() {
-        super.prepare()
-    }
-
 }

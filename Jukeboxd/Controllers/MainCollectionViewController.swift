@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainCollectionViewController.swift
 //  Jukeboxd
 //
 //  Created by Matthew Barker on 2/13/20.

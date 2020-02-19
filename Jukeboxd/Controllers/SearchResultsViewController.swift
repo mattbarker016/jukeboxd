@@ -83,7 +83,7 @@ class SearchResultsViewController: MediaCollectionViewController, UISearchResult
     func updateSearchResults(for searchController: UISearchController) {
         let searchText = getFormattedSearchBarText(searchController.searchBar)
         if searchText.isEmpty {
-            setPlaceholderBackgroundView()
+            setEmptyDataView()
             return
         }
         searchBarTimer?.invalidate()
@@ -95,7 +95,7 @@ class SearchResultsViewController: MediaCollectionViewController, UISearchResult
     
     func processSearchQuery(_ query: String) {
         if query.isEmpty {
-            setPlaceholderBackgroundView()
+            setEmptyDataView()
             return
         }
         SearchNetworkRequest.get(with: query) { (media, error) in
@@ -104,7 +104,7 @@ class SearchResultsViewController: MediaCollectionViewController, UISearchResult
                 return
             }
             DispatchQueue.main.async {
-                self.removePlaceholderBackgroundView()
+                self.removeEmptyDataView()
                 self.content = media
                 self.collectionView.reloadData()
             }
@@ -128,8 +128,8 @@ class SearchResultsViewController: MediaCollectionViewController, UISearchResult
     
     // MARK: - Placeholder Overrides
     
-    override var placeholderBackgrounndView: PlaceholderBackgroundView {
-        return PlaceholderBackgroundView(message: "Search for an album")
+    override var emptyDataView: EmptyDataView {
+        return EmptyDataView(message: "Search for an album")
     }
     
 }

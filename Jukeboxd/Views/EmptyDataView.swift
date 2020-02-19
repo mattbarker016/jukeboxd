@@ -1,5 +1,5 @@
 //
-//  PlaceholderBackgroundView.swift
+//  EmptyDataView.swift
 //  Jukeboxd
 //
 //  Created by Matthew Barker on 2/16/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PlaceholderBackgroundView: UIView {
+class EmptyDataView: UIView {
     
     var labelText: String!
     

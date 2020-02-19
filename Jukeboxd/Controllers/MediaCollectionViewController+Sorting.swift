@@ -1,5 +1,5 @@
 //
-//  MediaCollectionViewController.swift
+//  MediaCollectionViewController+Sorting.swift
 //  Jukeboxd
 //
 //  Created by Matthew Barker on 2/13/20.

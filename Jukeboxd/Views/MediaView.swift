@@ -8,7 +8,9 @@
 
 import UIKit
 
-extension CGFloat {
+private extension CGFloat {
+    static let imageViewWidth: CGFloat = 128
+    
     static let albumTrailingSpacing: CGFloat = 12
     static let labelVerticalSpacing: CGFloat = 2
     static let buttonViewBottomSpacing: CGFloat = -4
@@ -19,16 +21,14 @@ protocol MediaViewDelegate {
 }
 
 class MediaView: UIView {
-    
-    private let imageViewWidth: CGFloat = 128
-    
+        
     var media: Media!
     var delegate: MediaViewDelegate!
     
     init(media: Media, delegate: MediaViewDelegate) {
         self.media = media
         self.delegate = delegate
-        super.init(frame: .init(x: 0, y: 0, width: 300, height: 200))
+        super.init(frame: .zero)
         setupViews()
     }
     
@@ -118,7 +118,7 @@ class MediaView: UIView {
             imageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
             imageView.topAnchor.constraint(equalTo: containerView.topAnchor),
             imageView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
-            imageView.widthAnchor.constraint(equalToConstant: imageViewWidth),
+            imageView.widthAnchor.constraint(equalToConstant: .imageViewWidth),
             imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor),
         ]
     }

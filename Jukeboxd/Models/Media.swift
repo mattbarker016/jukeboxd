@@ -1,5 +1,5 @@
 //
-//  Model.swift
+//  Media.swift
 //  Jukeboxd
 //
 //  Created by Matthew Barker on 2/13/20.

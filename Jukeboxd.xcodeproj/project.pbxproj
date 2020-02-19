@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BF2055B623F6704600A2BE7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2055B523F6704600A2BE7B /* AppDelegate.swift */; };
-		BF2055BA23F6704600A2BE7B /* MainViewControllerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2055B923F6704600A2BE7B /* MainViewControllerController.swift */; };
+		BF2055BA23F6704600A2BE7B /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2055B923F6704600A2BE7B /* MainCollectionViewController.swift */; };
 		BF2055BF23F6704700A2BE7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF2055BE23F6704700A2BE7B /* Assets.xcassets */; };
 		BF2055C223F6704700A2BE7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2055C023F6704700A2BE7B /* LaunchScreen.storyboard */; };
 		BF2055CD23F6704800A2BE7B /* JukeboxdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2055CC23F6704800A2BE7B /* JukeboxdTests.swift */; };
@@ -20,7 +20,7 @@
 		BF2055E223F6734F00A2BE7B /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2055E123F6734F00A2BE7B /* SearchResultsViewController.swift */; };
 		BF2055E623F9D7BE00A2BE7B /* MediaCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2055E523F9D7BE00A2BE7B /* MediaCollectionViewFlowLayout.swift */; };
 		BF20562623F9E91300A2BE7B /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20562523F9E91300A2BE7B /* ReviewViewController.swift */; };
-		BF20562823F9EE7000A2BE7B /* PlaceholderBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20562723F9EE7000A2BE7B /* PlaceholderBackgroundView.swift */; };
+		BF20562823F9EE7000A2BE7B /* EmptyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20562723F9EE7000A2BE7B /* EmptyDataView.swift */; };
 		BF20562A23F9F4BA00A2BE7B /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20562923F9F4BA00A2BE7B /* SeparatorView.swift */; };
 		BF20562C23F9F81C00A2BE7B /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20562B23F9F81C00A2BE7B /* StarRatingView.swift */; };
 		BF20562E23FA110400A2BE7B /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20562D23FA110400A2BE7B /* Preferences.swift */; };
@@ -31,7 +31,7 @@
 		BF20564023FA6FFC00A2BE7B /* MediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20563F23FA6FFC00A2BE7B /* MediaView.swift */; };
 		BF20564223FA729600A2BE7B /* MediaImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20564123FA729600A2BE7B /* MediaImageView.swift */; };
 		BF20564423FA76BC00A2BE7B /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20564323FA76BB00A2BE7B /* LabelView.swift */; };
-		BF20564623FAA0A800A2BE7B /* MediaCollectionViewController+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20564523FAA0A700A2BE7B /* MediaCollectionViewController+Sort.swift */; };
+		BF20564623FAA0A800A2BE7B /* MediaCollectionViewController+Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20564523FAA0A700A2BE7B /* MediaCollectionViewController+Sorting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,7 @@
 /* Begin PBXFileReference section */
 		BF2055B223F6704600A2BE7B /* Jukeboxd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jukeboxd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2055B523F6704600A2BE7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF2055B923F6704600A2BE7B /* MainViewControllerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerController.swift; sourceTree = "<group>"; };
+		BF2055B923F6704600A2BE7B /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
 		BF2055BE23F6704700A2BE7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF2055C123F6704700A2BE7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF2055C323F6704700A2BE7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		BF2055E123F6734F00A2BE7B /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		BF2055E523F9D7BE00A2BE7B /* MediaCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		BF20562523F9E91300A2BE7B /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
-		BF20562723F9EE7000A2BE7B /* PlaceholderBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderBackgroundView.swift; sourceTree = "<group>"; };
+		BF20562723F9EE7000A2BE7B /* EmptyDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataView.swift; sourceTree = "<group>"; };
 		BF20562923F9F4BA00A2BE7B /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		BF20562B23F9F81C00A2BE7B /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
 		BF20562D23FA110400A2BE7B /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 		BF20563F23FA6FFC00A2BE7B /* MediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaView.swift; sourceTree = "<group>"; };
 		BF20564123FA729600A2BE7B /* MediaImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaImageView.swift; sourceTree = "<group>"; };
 		BF20564323FA76BB00A2BE7B /* LabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
-		BF20564523FAA0A700A2BE7B /* MediaCollectionViewController+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MediaCollectionViewController+Sort.swift"; sourceTree = "<group>"; };
+		BF20564523FAA0A700A2BE7B /* MediaCollectionViewController+Sorting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MediaCollectionViewController+Sorting.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,12 +116,11 @@
 			isa = PBXGroup;
 			children = (
 				BF2055B523F6704600A2BE7B /* AppDelegate.swift */,
-				BF20563A23FA1A5A00A2BE7B /* Collection Views */,
+				BF20563A23FA1A5A00A2BE7B /* Controllers */,
 				BF20563923FA1A4800A2BE7B /* Cells */,
 				BF20563523FA19D600A2BE7B /* Network */,
 				BF20563323FA19B500A2BE7B /* Models */,
 				BF20563823FA1A2900A2BE7B /* Utilities */,
-				BF20563B23FA1A8700A2BE7B /* View Controllers */,
 				BF20563423FA19C000A2BE7B /* Views */,
 				BF20563C23FA1A9A00A2BE7B /* Supporting Files */,
 			);
@@ -153,7 +152,7 @@
 				BF20564323FA76BB00A2BE7B /* LabelView.swift */,
 				BF20564123FA729600A2BE7B /* MediaImageView.swift */,
 				BF20563F23FA6FFC00A2BE7B /* MediaView.swift */,
-				BF20562723F9EE7000A2BE7B /* PlaceholderBackgroundView.swift */,
+				BF20562723F9EE7000A2BE7B /* EmptyDataView.swift */,
 				BF20562923F9F4BA00A2BE7B /* SeparatorView.swift */,
 				BF20562B23F9F81C00A2BE7B /* StarRatingView.swift */,
 			);
@@ -186,24 +185,17 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		BF20563A23FA1A5A00A2BE7B /* Collection Views */ = {
+		BF20563A23FA1A5A00A2BE7B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BF2055B923F6704600A2BE7B /* MainViewControllerController.swift */,
+				BF2055B923F6704600A2BE7B /* MainCollectionViewController.swift */,
 				BF2055D923F6711600A2BE7B /* MediaCollectionViewController.swift */,
-				BF20564523FAA0A700A2BE7B /* MediaCollectionViewController+Sort.swift */,
+				BF20564523FAA0A700A2BE7B /* MediaCollectionViewController+Sorting.swift */,
 				BF2055E523F9D7BE00A2BE7B /* MediaCollectionViewFlowLayout.swift */,
+				BF20562523F9E91300A2BE7B /* ReviewViewController.swift */,
 				BF2055E123F6734F00A2BE7B /* SearchResultsViewController.swift */,
 			);
-			path = "Collection Views";
-			sourceTree = "<group>";
-		};
-		BF20563B23FA1A8700A2BE7B /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				BF20562523F9E91300A2BE7B /* ReviewViewController.swift */,
-			);
-			path = "View Controllers";
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		BF20563C23FA1A9A00A2BE7B /* Supporting Files */ = {
@@ -321,9 +313,9 @@
 				BF2055D823F670CA00A2BE7B /* DynamicImageView.swift in Sources */,
 				BF20562A23F9F4BA00A2BE7B /* SeparatorView.swift in Sources */,
 				BF20563723FA19EB00A2BE7B /* MediaNetworkRequest.swift in Sources */,
-				BF20562823F9EE7000A2BE7B /* PlaceholderBackgroundView.swift in Sources */,
+				BF20562823F9EE7000A2BE7B /* EmptyDataView.swift in Sources */,
 				BF20563023FA195000A2BE7B /* UIKit+Shared.swift in Sources */,
-				BF2055BA23F6704600A2BE7B /* MainViewControllerController.swift in Sources */,
+				BF2055BA23F6704600A2BE7B /* MainCollectionViewController.swift in Sources */,
 				BF20562623F9E91300A2BE7B /* ReviewViewController.swift in Sources */,
 				BF20563223FA199E00A2BE7B /* Media.swift in Sources */,
 				BF20562C23F9F81C00A2BE7B /* StarRatingView.swift in Sources */,
@@ -338,7 +330,7 @@
 				BF20564223FA729600A2BE7B /* MediaImageView.swift in Sources */,
 				BF2055E223F6734F00A2BE7B /* SearchResultsViewController.swift in Sources */,
 				BF20564023FA6FFC00A2BE7B /* MediaView.swift in Sources */,
-				BF20564623FAA0A800A2BE7B /* MediaCollectionViewController+Sort.swift in Sources */,
+				BF20564623FAA0A800A2BE7B /* MediaCollectionViewController+Sorting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

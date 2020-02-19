@@ -25,7 +25,7 @@ class ReviewViewController: UIViewController {
     private var textViewTimer: Timer?
     
     var isNewReview: Bool {
-        return !savedReviews.get().contains(where: { $0.media == media })
+        return navigationController?.viewControllers.first is SearchResultsViewController
     }
     
     // MARK: - View Life Cycle
@@ -180,9 +180,11 @@ class ReviewViewController: UIViewController {
         
         // Date Reviewed Label
         containerView.addSubview(dateReviewedLabel)
+        dateReviewedLabel.isHidden = isNewReview
         
         // Date Label
         containerView.addSubview(dateLabel)
+        dateLabel.isHidden = isNewReview
         
         // Star Rating Label
         containerView.addSubview(starRatingLabel)
@@ -269,9 +271,19 @@ class ReviewViewController: UIViewController {
     }
     
     func addStarRatingLabelConstraints() -> [NSLayoutConstraint] {
+        // Hide dateReviewedLabel and dateLabel based on contxt.
+        var topAnchor: NSLayoutAnchor<NSLayoutYAxisAnchor>
+        var topAnchorConstant: CGFloat
+        if isNewReview {
+            topAnchor = mediaViewRatingSpacer.bottomAnchor
+            topAnchorConstant = SeparatorView.preferredSpacing
+        } else {
+            topAnchor = dateLabel.bottomAnchor
+            topAnchorConstant = .componentVerticalSpacing
+        }
         return [
             starRatingLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            starRatingLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: .componentVerticalSpacing),
+            starRatingLabel.topAnchor.constraint(equalTo: topAnchor, constant: topAnchorConstant),
         ]
     }
     
