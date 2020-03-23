@@ -1,6 +1,6 @@
 # Jukeboxd New Hire Document
 
-Welcome to **Jukeboxd**, the best way to record your listening habits! We’re so lucky to have you onboard to help us ship our brand-new iOS app. Here's a taste of what it should look like!
+Welcome to **Jukeboxd**, the best way to record your listening habits! We’re so lucky to have you on board to help us ship our brand-new iOS app. Here's a taste of what it will look like!
 
 <br/>
 <p align="center">
@@ -8,11 +8,11 @@ Welcome to **Jukeboxd**, the best way to record your listening habits! We’re s
 </p>
 <br/>
 
-We’re still working through some bugs created by Matt, one of our other developers who’s on THIN ICE. Heh, just a little Jukeboxd joke, we’d never fire Matt because his music taste is too good. But enough of that, let’s get started!
+We’re still working through some bugs created by Matt, one of our other developers who’s on _thin ice_. Heh, just a little Jukeboxd joke, we’d never fire Matt because his music taste is too good. But enough of that, let’s get started!
 
 ## TODOs
 
-While Matt couldn’t code his way out of a Mac Pro packaging box, he was kind enough to leave detailed instructions on all of the bugs his code. You'll have to fix some of these bugs before you're able to get to other ones, so use this reccomended order below.
+While Matt couldn’t code his way out of a Mac Pro packaging box, he was kind enough to leave detailed notes and instructions for all of the bugs his code. You'll have to fix some of these bugs before you're able to get to other ones, so use this reccomended order below.
 
 ### Order
 
