@@ -1,6 +1,6 @@
 # If your name is Megan She, don't look at this!
 
-This branch contains the **answer key** to your lovely Valentine's day project on the `tutorial` branch. If you're stumped on a `TODO`, just ask me :)
+This branch contains the **answer key** to your lovely Valentine's day project on the `tutorial` [branch](https://github.com/mattbarker016/jukeboxd/tree/tutorial). If you're stumped on a `TODO`, just ask me :)
 
 # To everyone else...
 
