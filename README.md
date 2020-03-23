@@ -12,7 +12,7 @@ We’re still working through some bugs created by Matt, one of our other develo
 
 ## TODOs
 
-While Matt couldn’t code his way out of a Mac Pro packaging box, he was kind enough to leave detailed instructions on all of the bugs his code. Open the search navigator in the left panel, and search for `TODO:` within the project. You'll have to fix some of these bugs before you're able to get to other ones, so use this reccomended order below.
+While Matt couldn’t code his way out of a Mac Pro packaging box, he was kind enough to leave detailed instructions on all of the bugs his code. You'll have to fix some of these bugs before you're able to get to other ones, so use this reccomended order below.
 
 ### Order
 
@@ -27,9 +27,15 @@ While Matt couldn’t code his way out of a Mac Pro packaging box, he was kind e
 
 Every time you fix a bug, try running the app to see your handiwork!
 
+## Instructions
+
+1. On the [main GitHub page](https://github.com/mattbarker016/jukeboxd/tree/tutorial), select the green **Clone or Download** button, and then select **Download ZIP**.
+2. Download [**Xcode**](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and use it to open **`Jukeboxd.xcodeproj`**.
+3. Open the Search Navigator in the left panel of Xcode, and search for **`TODO:`** within the project.
+
 ## Resources
 
-Make sure you check out that handy [Swift Crash Course in Swift](https://www.icloud.com/iclouddrive/0QK5EbdEyPoPO8U86X_E8N69A#A_Swift_Crash_Course_in_Swift) playground for some lessons in using Swift. The “One More Thing” page will help you getting [Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) running and troubleshooting any issues you face.
+Make sure you check out that handy [Swift Crash Course in Swift](https://www.icloud.com/iclouddrive/0QK5EbdEyPoPO8U86X_E8N69A#A_Swift_Crash_Course_in_Swift) playground for some lessons in using Swift. The **One More Thing** page will help you getting [Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) running and troubleshooting any issues you face.
 
 ## Extras
 
@@ -43,9 +49,7 @@ The app doesn’t save a user’s preferred sorting preference. We’d love to p
 
 That [album.link](https://album.link) site is cool or whatever, but wouldn’t it be awesome if you could tap “View” and just open the app of a superior music streaming service? Or, even better, if the user could pick their preferred service to open? There’s an [API](https://github.com/songlink/docs/blob/master/api-v1-alpha.1.md) for that!
 
-### Deleting reviews
-
-There’s no way to delete reviews in the app. I don’t know why a user would want to, but our beta testers have been demanding it, as they’ve added hundreds of reviews for this one Daft Punk album and want to get rid of at least some of them!
+### Have any ideas? Add some of yours!
 
 ## That's All, Folks!
 
