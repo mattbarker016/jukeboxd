@@ -19,27 +19,57 @@ enum SortingMode {
 extension MediaCollectionViewController {
     
     func sortingFunction(for mode: SortingMode, isReversed: Bool = false) -> ((Review, Review) -> Bool) {
+        
+        // TODO: Enable the album sorting logic!
+        
+        // This function returns a sorting function based on the passed in `sortingMode`.
+        // We are creating a function that takes in two instances of a `Review` that are
+        // assigned the values `a` and `b`, and returning `true` if review `a` should be
+        // before review `b`. The sorting value could also be reversed (`isReversed`)
+        
+        // Based on each case below, use the proper review properties to sort the reviews
+        // accordingly. The first one has been implemented for you. Use it as a reference example!
+        
+        // Challenge: Is there a simpler way to implemenet the `.rating` case? Hint: How could
+        // you only use one greater / less than operator with `isReversed`?
+        
         switch mode {
-        case .alphabeticalAlbumName:
-            return { (a, b) -> Bool in
-                return isReversed ? (a.media.albumName > b.media.albumName) : (a.media.albumName < b.media.albumName)
-            }
-        case .alphabeticalArtistName:
-            return { (a, b) -> Bool in
-                return isReversed ? (a.media.artistName > b.media.artistName) : (a.media.artistName < b.media.artistName)
-            }
-        case .dateCreated:
-            return { (a, b) -> Bool in
-                return isReversed ? (a.dateCreated < b.dateCreated) : (a.dateCreated > b.dateCreated)
-            }
-        case .dateUpdated:
-            return { (a, b) -> Bool in
-                return isReversed ? (a.dateUpdated < b.dateUpdated) : (a.dateUpdated > b.dateUpdated)
-            }
         case .rating:
             return { (a, b) -> Bool in
                 return isReversed ? (a.rating < b.rating) : (a.rating > b.rating)
             }
+            
+        case .alphabeticalAlbumName:
+            return { (a, b) -> Bool in
+                
+                // Implement me!
+                
+                return true // remove me once you return the proper value
+            }
+            
+        case .alphabeticalArtistName:
+            return { (a, b) -> Bool in
+                
+                // Implement me!
+                
+                return true // remove me once you return the proper value
+            }
+        case .dateCreated:
+            return { (a, b) -> Bool in
+                
+                // Implement me!
+                
+                return true // remove me once you return the proper value
+            }
+            
+        case .dateUpdated:
+            return { (a, b) -> Bool in
+                
+                // Implement me!
+                
+                return true // remove me once you return the proper value
+            }
+            
         }
     }
     

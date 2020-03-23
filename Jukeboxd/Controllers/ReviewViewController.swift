@@ -41,9 +41,29 @@ class ReviewViewController: UIViewController {
     convenience init(review: Review, delegate: MediaCollectionViewDelegate? = nil) {
         self.init(media: review.media, delegate: delegate)
         
-        dateLabel.text = formattedDateString(for: review.dateCreated)
-        starRatingView.setState(to: .value(review.rating))
-        reviewTextView.text = review.description
+        // TODO: Set up a review!
+        
+        // In this function, we're setting up `ReviewViewController` to present an existing view.
+        // We are given a review object that comes from the device's memory. We have to set a few
+        // UI componenets to display the review's information. Specifically, we have to set:
+        
+        // dateLabel: A UILabel that shows when the review was created or updated.
+        // starRatingView: A UIView that displays the rating of the review.
+        // reviewTextView: a UITextView that allows the user to view or edit the review description.
+        
+        // Helper Functions
+        // `formattedDateString` will return a readable description of a Date object.
+        
+        // Remember, always try adding a "." after a unknown data type to see what properties or functions
+        // you can use in it. When autocomplete gives you a function, you can double-click the placeholder
+        // values to get the class name and then type a "." after to see how you could use it.
+        
+        // YOUR CODE STARTS HERE
+        
+        
+        
+        // YOUR CODE ENDS HERE
+
     }
     
     required init?(coder: NSCoder) {
@@ -340,27 +360,38 @@ class ReviewViewController: UIViewController {
     // MARK: - Helper Functions
     
     @objc func saveReview() {
-        // Rating
-        guard let rating = starRatingView.getValue() else {
-            presentErrorAlert(title: "Invalid Review", message: "You have to provide a rating to save a review!", on: self)
-            return
-        }
-        // Review
-        var reviewDescription = reviewTextView.text
-        if reviewDescription == placeholderText {
-            reviewDescription = nil
-        }
-        // Save
-        if var existingReview = getExistingReview() {
-            savedReviews.remove(existingReview)
-            existingReview.dateUpdated = Date()
-            existingReview.rating = rating
-            existingReview.description = reviewDescription
-            savedReviews.add(existingReview)
-        } else {
-            let newReview = Review(media: media, rating: rating, description: reviewDescription)
-            savedReviews.add(newReview)
-        }
+        
+        // TODO: Save a review!
+        
+        // This file, `ReviewViewController`, manages the experience when the user is viewing or creating an album review.
+        // This function, `saveReview`, fires when the textfield is updated, star rating is changed, or the save button is tapped.
+        // Note: A user could be updating an existing review (which auto-saves), or creating a new review.
+        
+        // You will need to access data from these sources:
+        //     1. starRatingView: The view that shows the number of selected stars for the review.
+        //     2. reviewTextView: The textfield used for entering the review text itself.
+        //     3. getExistingReview(): This will return an existing review for the current album if it exists;
+        //        Otherwise, it will be nil.
+        //     4. savedReviews: This object allows you to get saved reviews on device and save new reviews.
+        
+        // Hint: Auto-complete is your friend! Type "." after any the above objects to see what properties and functions you can
+        // use to save the review!
+        
+        // Some Potential Gotchas
+        //     1. Is there a situation wher e you wouldn't want to save a review due to invalid data? To handle that scenario, you
+        //     could use `return` to end the function execution, and maybe use a helper functinon called `presentErrorAlert`.
+        //     2. If you're updating an existing review, how do you make sure only the updated review information is saved?
+
+        
+        // YOUR CODE STARTS HERE
+        
+        
+        
+        // YOUR CODE ENDS HERE
+        
+        
+        // This function will be called on the main collection view controller to refresh its data
+        // based on the reviews saved to the device.
         delegate?.updateMediaContent()
     }
     

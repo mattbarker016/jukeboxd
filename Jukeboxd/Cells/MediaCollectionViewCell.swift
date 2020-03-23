@@ -70,10 +70,11 @@ public class MediaCollectionViewCell: UICollectionViewCell {
     var detailLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .secondaryLabel
-        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        label.numberOfLines = 1
-        label.lineBreakMode = .byTruncatingTail
+        
+        // TODO: Add the proper styling for this UILabel!
+        // Hint: look at titleLabel and think about how you'd modify it
+        // for a secondary detail label.
+        
         return label
     }()
     
@@ -132,12 +133,44 @@ public class MediaCollectionViewCell: UICollectionViewCell {
     }
     
     func createDetailLabelConstraints() -> [NSLayoutConstraint] {
-        return [
-            detailLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
-            detailLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
-            detailLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: .titleDetailLabelVerticalSpacing),
-            detailLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
-        ]
+        
+        // TODO: Add layout constraints to the detail UILabel!
+        
+        // Auto-Layout is a blessing and a curse, a boon and a burden. This is a horribly
+        // quick and dirty lesson about them, but here it goes. Auto-layout is what enables developers
+        // to layout complex views on devices with variable size. When you use auto-layout, you use
+        // constraints to layout out views with respect to one another. Constraints are like math equations
+        // that the compiler users to figure where where on the screen to put a view.
+        
+        // Every view has a series of anchors for significant points. `leadingAnchor`, or `leftAnchor`, is
+        // the leftmost-side of a view, and `trailingAnchor` or `rightAnchor` is the right side. There's also
+        // `topAnchor` and `bottomAnchor`. `widthAnchor` and `heightAnchor` are used to set widths and heights
+        // in relation to other views. You can see eamples of these anchors and constraints in the other
+        // constraint functions in this class.
+        
+        // Your job is to add the constraints for one last view, a detail label. This cell has three views:
+        // the album `imageView`, the `titleLabel` for the album name, and the `detailLabel` for the artistName.
+        // All of these views are in a `containerView`, which does just that: contain all the views.
+        
+        // The cell has the imageView at the top, which has its leading, trailing, and top anchors pinned to the
+        // container view. The width should be the same, and the height should match the width. (Aside: We make the
+        // image the width of the container because we tell the cell how big it should be, not the other way around
+        // where the image defines the cell.)
+        
+        // Similarly, the `titleLabel` is directly below the imageView, with some spacing (see the `constant` in
+        // the constraint) so they're not on top of each other. It's leading and trailing anchors match the
+        // imageView. Our `detailLabel` will be similar to those constraints, but we have to add a `bottomAnchor` constraint
+        // to the container view so the cell has all four sides of its frame accounted for.
+        
+        // All you need are 4 constraints to add: one for each side of the label. Get to it! If you're not sure
+        // where to start, look at the other constraint functions in this class as a reference point.
+        
+        // ADD YOUR CODE BELOW HERE
+        
+        return [] // add proper constraints here
+        
+        // ADD YOUR CODE ABOVE HERE
+        
     }
         
     lazy var widthConstraint: NSLayoutConstraint = {
