@@ -8,6 +8,8 @@
 
 import UIKit
 
+var isSwiftPlayground = false
+
 func presentErrorAlert(title: String, message: String, on controller: UIViewController) {
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
     let action = UIAlertAction(title: "Dismiss", style: .default, handler: nil)

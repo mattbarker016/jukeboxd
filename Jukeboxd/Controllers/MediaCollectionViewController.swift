@@ -61,7 +61,7 @@ class MediaCollectionViewController: UICollectionViewController, MediaCollection
     // MARK: Empty Data Source
     
     var emptyDataView: EmptyDataView {
-        return EmptyDataView(message: "Welcome to Jukeboxd! Search an album to rate and review it and keep track of your favorite albums!")
+        return EmptyDataView(message: "Welcome to Jukeboxd! Tap the add button to get started.")
     }
     
     func setEmptyDataView() {

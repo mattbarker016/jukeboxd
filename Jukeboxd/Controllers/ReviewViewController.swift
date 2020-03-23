@@ -62,6 +62,9 @@ class ReviewViewController: UIViewController {
             let saveButton = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didTapSave))
             saveButton.isEnabled = false
             navigationItem.rightBarButtonItem = saveButton
+        } else {
+            let deleteButton = UIBarButtonItem(title: "Delete", style: .plain, target: self, action: #selector(didTapDelete))
+            navigationItem.rightBarButtonItem = deleteButton
         }
         
         navigationItem.largeTitleDisplayMode = .never
@@ -271,7 +274,7 @@ class ReviewViewController: UIViewController {
     }
     
     func addStarRatingLabelConstraints() -> [NSLayoutConstraint] {
-        // Hide dateReviewedLabel and dateLabel based on contxt.
+        // Hide dateReviewedLabel and dateLabel based on context.
         var topAnchor: NSLayoutAnchor<NSLayoutYAxisAnchor>
         var topAnchorConstant: CGFloat
         if isNewReview {
@@ -324,20 +327,17 @@ class ReviewViewController: UIViewController {
     @objc func didTapDoneOnKeyboard() {
         reviewTextView.resignFirstResponder()
     }
-        
-    @objc func dismissViewController() {
-        dismiss(animated: true)
-    }
     
     @objc func didTapSave() {
         saveReview()
-        
-        if navigationController?.viewControllers.first is MainCollectionViewController {
-            navigationController?.popViewController(animated: true)
-        } else {
-            dismiss(animated: true)
-        }
+        dismissViewController()
     }
+    
+    @objc func didTapDelete() {
+        presentDeletionConfirmation()
+    }
+    
+    // MARK: - Helper Functions
     
     @objc func saveReview() {
         // Rating
@@ -351,7 +351,7 @@ class ReviewViewController: UIViewController {
             reviewDescription = nil
         }
         // Save
-        if var existingReview = savedReviews.get().first(where: { $0.media == media }) {
+        if var existingReview = getExistingReview() {
             savedReviews.remove(existingReview)
             existingReview.dateUpdated = Date()
             existingReview.rating = rating
@@ -362,6 +362,39 @@ class ReviewViewController: UIViewController {
             savedReviews.add(newReview)
         }
         delegate?.updateMediaContent()
+    }
+    
+    func getExistingReview() -> Review? {
+        return savedReviews.get().first(where: { $0.media == media })
+    }
+    
+    func dismissViewController() {
+        if navigationController?.viewControllers.first is MainCollectionViewController {
+            navigationController?.popViewController(animated: true)
+        } else {
+            dismiss(animated: true)
+        }
+    }
+    
+    func presentDeletionConfirmation() {
+        let title = "Delete Review"
+        let message = "Are you sure you want to delete your review of \(media.albumName)?"
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let delete = UIAlertAction(title: "Delete", style: .destructive, handler:  { (_) in
+            self.deleteReview()
+            self.dismissViewController()
+        })
+        alert.addAction(cancel)
+        alert.addAction(delete)
+        present(alert, animated: true)
+    }
+    
+    func deleteReview() {
+        if let existingReview = getExistingReview() {
+            savedReviews.remove(existingReview)
+            delegate?.updateMediaContent()
+        }
     }
         
 }
@@ -410,9 +443,13 @@ extension ReviewViewController: StarRatingViewDelegate {
 
 // MARK: - MediaViewDelegate
 extension ReviewViewController: MediaViewDelegate {
-    func didTapPrimaryButtonView() {
-        guard let link = URL(string: media.url) else { return }
-        let safariViewController = SFSafariViewController(url: link)
-        present(safariViewController, animated: true)
+    public func didTapPrimaryButtonView() {
+        if isSwiftPlayground {
+            presentErrorAlert(title: "Feature Unavailable", message: "This feature isn't available in Swift Playgrounds.", on: self)
+        } else {
+            guard let link = URL(string: media.url) else { return }
+            let safariViewController = SFSafariViewController(url: link)
+            present(safariViewController, animated: true)
+        }
     }
 }

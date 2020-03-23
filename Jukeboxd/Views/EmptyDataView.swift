@@ -8,6 +8,10 @@
 
 import UIKit
 
+private extension CGFloat {
+    static let horizontalInset: CGFloat = 60
+}
+
 class EmptyDataView: UIView {
     
     var labelText: String!
@@ -50,8 +54,8 @@ class EmptyDataView: UIView {
     
     func addLabelConstraints() -> [NSLayoutConstraint] {
         return [
-            label.leadingAnchor.constraint(equalTo: leadingAnchor),
-            label.trailingAnchor.constraint(equalTo: trailingAnchor),
+            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .horizontalInset),
+            label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -.horizontalInset),
             label.topAnchor.constraint(equalTo: topAnchor),
             label.bottomAnchor.constraint(equalTo: bottomAnchor),
         ]

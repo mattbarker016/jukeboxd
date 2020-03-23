@@ -16,12 +16,12 @@ class MediaCollectionViewFlowLayout: UICollectionViewFlowLayout {
     
     // Section Insets
     let horizontalInset: CGFloat = 20
-    let verticalInset: CGFloat = 0
+    let verticalInset: CGFloat = 20
     
     override init() {
         super.init()
                 
-        let mainWidth = UIScreen.main.bounds.width
+        let mainWidth = isSwiftPlayground ? 400 : UIScreen.main.bounds.width 
         let containerWidth = mainWidth - horizontalInset * 2
         let numberOfSpaces = numberOfItemsPerRow - 1
         let totalItemWidth = containerWidth - (interItemSpacing * CGFloat(numberOfSpaces))
