@@ -1,6 +1,14 @@
 # Jukeboxd New Hire Document
 
-Welcome to **Jukeboxd**, the best way to record your listening habits! We’re so lucky to have you onboard to help us ship our brand-new iOS app. We’re still working through some bugs created by Matt, one of our other developers who’s on THIN ICE. Heh, just a little Jukeboxd joke, we’d never fire Matt because his music taste is too good. But enough of that, let’s get started!
+Welcome to **Jukeboxd**, the best way to record your listening habits! We’re so lucky to have you onboard to help us ship our brand-new iOS app. Here's a taste of what it should look like!
+
+<br/>
+<p align="center">
+<img src="Assets/Home.PNG" width=250'><img src="Assets/Search.PNG" width=250><img src="Assets/Review.PNG" width=250>
+</p>
+<br/>
+
+We’re still working through some bugs created by Matt, one of our other developers who’s on THIN ICE. Heh, just a little Jukeboxd joke, we’d never fire Matt because his music taste is too good. But enough of that, let’s get started!
 
 ## TODOs
 
@@ -38,3 +46,7 @@ That [album.link](https://album.link) site is cool or whatever, but wouldn’t i
 ### Deleting reviews
 
 There’s no way to delete reviews in the app. I don’t know why a user would want to, but our beta testers have been demanding it, as they’ve added hundreds of reviews for this one Daft Punk album and want to get rid of at least some of them!
+
+## That's All, Folks!
+
+Let me know if you have any questions! I'm as excited as you are to see you complete this app, and where you can take it from here 💙
